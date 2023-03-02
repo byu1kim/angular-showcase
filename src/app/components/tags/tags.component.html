@@ -1,0 +1,6 @@
+<div class="tags">
+  <div class="title">**Tags**</div>
+  <div *ngFor="let tag of tags" class="sub-title" (click)="setTagFilter(tag)">
+    {{ tag.name }}
+  </div>
+</div>

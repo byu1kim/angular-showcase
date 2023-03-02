@@ -1,0 +1,64 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.body {
+  display: grid;
+  width: 100%;
+  border: 2px solid red;
+
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "main main sidebar"
+    "footer footer footer";
+
+  .header {
+    grid-area: header;
+  }
+
+  .main {
+    grid-area: main;
+    .card {
+      background-color: pink;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    .filter {
+      background-color: lightgray;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 10px;
+      text-align: right;
+    }
+
+    div {
+      padding: 5px;
+    }
+
+    .sub-title:hover {
+      cursor: pointer;
+    }
+  }
+  .title {
+    font-weight: 600;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+.hidden {
+  display: none;
+}
