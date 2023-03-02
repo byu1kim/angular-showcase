@@ -14,7 +14,6 @@ export class AppComponent {
 
   setTagFilter(tag: Tag) {
     this.tagFilter = tag;
-    console.log('Called');
   }
 
   categoryFilter: Category | undefined;

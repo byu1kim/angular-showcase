@@ -51,7 +51,20 @@ export const PROJECTS: Project[] = [
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 1, slug: 'back-end', name: 'Back End' },
-    tags: [],
+    tags: [
+      {
+        id: 1,
+        name: 'Laravel',
+        slug: 'laravel',
+        pivot: { projects_id: 2, tags_id: 1 },
+      },
+      {
+        id: 2,
+        name: 'Docker',
+        slug: 'docker',
+        pivot: { projects_id: 2, tags_id: 3 },
+      },
+    ],
   },
   {
     id: 3,
@@ -68,7 +81,20 @@ export const PROJECTS: Project[] = [
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: null,
-    tags: [],
+    tags: [
+      {
+        id: 1,
+        name: 'PHP',
+        slug: 'php',
+        pivot: { projects_id: 3, tags_id: 2 },
+      },
+      {
+        id: 2,
+        name: 'Docker',
+        slug: 'docker',
+        pivot: { projects_id: 3, tags_id: 3 },
+      },
+    ],
   },
   {
     id: 4,

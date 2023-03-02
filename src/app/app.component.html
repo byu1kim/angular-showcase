@@ -14,7 +14,15 @@
 
   <div class="sidebar">
     <div class="filter">
-      <div class="title">Filter</div>
+      <div class="title">Filter:</div>
+      <div *ngIf="categoryFilter || tagFilter">
+        <div class="current-filter" (click)="clearFilters()">
+          {{ categoryFilter?.name || tagFilter?.name }}
+          <button (click)="clearFilters()">Del</button>
+          <i class="bi bi-trash"></i>
+        </div>
+      </div>
+
       <app-categories
         [categoryFilter]="categoryFilter"
         (newCategoryFilterEvent)="setCategoryFilter($event)"
