@@ -20,6 +20,7 @@ export class AppComponent {
   setCategoryFilter(category: Category) {
     this.categoryFilter = category;
   }
+
   clearFilters() {
     this.categoryFilter = undefined;
     this.tagFilter = undefined;

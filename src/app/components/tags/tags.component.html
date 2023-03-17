@@ -1,6 +1,10 @@
 <div class="tags">
   <div class="title">**Tags**</div>
-  <div *ngFor="let tag of tags" class="sub-title" (click)="setTagFilter(tag)">
+  <div
+    *ngFor="let tag of tags"
+    class="sub-title"
+    routerLink="/projects/tags/{{ tag.id }}"
+  >
     {{ tag.name }}
   </div>
 </div>

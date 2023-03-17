@@ -1,39 +1,18 @@
-<div class="body">
-  <div class="header">
-    <h1>{{ title }}</h1>
-  </div>
+<main class="layout">
+  <header class="header">
+    <nav>
+      <div class="logo">BYUL</div>
+
+      <ul>
+        <li><span routerLink="/">Home</span></li>
+        <li><span routerLink="/about">About</span></li>
+        <li><span routerLink="/projects">Projects</span></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="main">
-    <app-projects
-      [categoryFilter]="categoryFilter"
-      [tagFilter]="tagFilter"
-      (newCategoryFilterEvent)="setCategoryFilter($event)"
-      (newTagFilterEvent)="setTagFilter($event)"
-    ></app-projects>
+    <router-outlet></router-outlet>
   </div>
-
-  <div class="sidebar">
-    <div class="filter">
-      <div class="title">Filter:</div>
-      <div *ngIf="categoryFilter || tagFilter">
-        <div class="current-filter" (click)="clearFilters()">
-          {{ categoryFilter?.name || tagFilter?.name }}
-          <button (click)="clearFilters()">Del</button>
-          <i class="bi bi-trash"></i>
-        </div>
-      </div>
-
-      <app-categories
-        [categoryFilter]="categoryFilter"
-        (newCategoryFilterEvent)="setCategoryFilter($event)"
-      >
-      </app-categories>
-      <app-tags
-        [tagFilter]="tagFilter"
-        (newTagFilterEvent)="setTagFilter($event)"
-      >
-      </app-tags>
-    </div>
-  </div>
-  <div class="footer">Byul Kim</div>
-</div>
+  <footer class="footer">Byul Kim</footer>
+</main>

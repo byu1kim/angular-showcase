@@ -1,17 +1,8 @@
-<!-- <div *ngIf="categoryFilter">
-  {{ categoryFilter.name }} <button (click)="clearFilter()">Del</button>
-
-  <div *ngIf="tagFilter">
-    {{ tagFilter.name }} <button (click)="clearFilter()">Del</button>
-  </div>
-</div> -->
 <div class="categories">
   <div class="title">**Categories**</div>
-  <div
-    *ngFor="let category of categories"
-    (click)="setCategoryFilter(category)"
-    class="sub-title"
-  >
-    {{ category.name }}
+  <div *ngFor="let category of categories" class="sub-title">
+    <div routerLink="/projects/categories/{{ category.id }}">
+      {{ category.name }}
+    </div>
   </div>
 </div>
