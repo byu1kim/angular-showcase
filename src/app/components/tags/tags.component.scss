@@ -1,3 +1,18 @@
 .hidden {
   display: none;
 }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  .title {
+    color: #fcd34d;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  .sub-title {
+    margin-right: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

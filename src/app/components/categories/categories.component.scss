@@ -1,0 +1,11 @@
+.categories {
+  display: flex;
+  .title {
+    color: #fcd34d;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+  .sub-title {
+    margin-right: 20px;
+  }
+}

@@ -10,27 +10,17 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg',
     category_id: 3,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 3, slug: 'full-stack', name: 'Full Stack' },
     tags: [
-      {
-        id: 1,
-        name: 'Laravel',
-        slug: 'laravel',
-      },
-      {
-        id: 2,
-        name: 'PHP',
-        slug: 'php',
-      },
-      {
-        id: 3,
-        name: 'Docker',
-        slug: 'docker',
-      },
+      { id: 1, name: 'Javascript', slug: 'js' },
+      { id: 2, name: 'HTML', slug: 'html' },
+      { id: 13, name: 'Sass', slug: 'sass' },
+      { id: 16, name: 'SQL', slug: 'sql' },
     ],
   },
   {
@@ -43,22 +33,16 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
     category_id: 1,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 1, slug: 'back-end', name: 'Back End' },
     tags: [
-      {
-        id: 1,
-        name: 'Laravel',
-        slug: 'laravel',
-      },
-      {
-        id: 2,
-        name: 'Docker',
-        slug: 'docker',
-      },
+      { id: 8, name: 'Node.Js', slug: 'node' },
+      { id: 13, name: 'Sass', slug: 'sass' },
+      { id: 15, name: 'MongoDB', slug: 'MongoDB' },
     ],
   },
   {
@@ -71,22 +55,17 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2017/05/11/11/15/workplace-2303851_1280.jpg',
     category_id: null,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: null,
     tags: [
-      {
-        id: 1,
-        name: 'PHP',
-        slug: 'php',
-      },
-      {
-        id: 2,
-        name: 'Docker',
-        slug: 'docker',
-      },
+      { id: 1, name: 'Javascript', slug: 'js' },
+      { id: 4, name: 'React', slug: 'react' },
+      { id: 12, name: 'Tailwind', slug: 'tailwind' },
+      { id: 16, name: 'SQL', slug: 'sql' },
     ],
   },
   {
@@ -99,12 +78,16 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
     category_id: 2,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 2, slug: 'front-end', name: 'Front End' },
-    tags: [],
+    tags: [
+      { id: 9, name: 'ASP.NET', slug: 'dotnet' },
+      { id: 16, name: 'SQL', slug: 'sql' },
+    ],
   },
   {
     id: 5,
@@ -116,12 +99,16 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg',
     category_id: 2,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 2, slug: 'front-end', name: 'Front End' },
-    tags: [],
+    tags: [
+      { id: 2, name: 'HTML', slug: 'html' },
+      { id: 3, name: 'CSS', slug: 'css' },
+    ],
   },
   {
     id: 6,
@@ -133,12 +120,16 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
     category_id: null,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: null,
-    tags: [],
+    tags: [
+      { id: 1, name: 'Javascript', slug: 'js' },
+      { id: 15, name: 'MongoDB', slug: 'MongoDB' },
+    ],
   },
   {
     id: 7,
@@ -150,7 +141,8 @@ export const PROJECTS: Project[] = [
     url: null,
     published_date: null,
     image: null,
-    thumb: null,
+    thumb:
+      'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
     category_id: null,
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',

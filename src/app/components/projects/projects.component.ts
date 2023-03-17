@@ -55,6 +55,7 @@ export class ProjectsComponent implements OnInit {
   @Input() tagFilter: Tag | undefined;
   @Output() newTagFilterEvent = new EventEmitter<Tag>();
 
+  title = 'Projects';
   setCategoryFilter(category: Category) {
     this.categoryFilter = category;
     this.newCategoryFilterEvent.emit(category);

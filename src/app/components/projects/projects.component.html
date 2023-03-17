@@ -1,62 +1,58 @@
-<ng-container *ngIf="!selectedProject">
-  <article
-    *ngFor="let project of projects | projectFilter : tagFilter"
-    [class.hidden]="categoryFilter && project.category?.id != categoryFilter.id"
-  >
-    <!-- <section (click)="onSelect(project)"> -->
-    <section routerLink="/projects/{{ project.id }}">
-      <h2>{{ project.title | uppercase }}</h2>
-      <div [innerHTML]="project.body"></div>
-    </section>
-    <footer>
-      <div
-        *ngIf="project.category"
-        (click)="setCategoryFilter(project.category)"
-      >
-        Category: <span>{{ project.category.name }}</span>
-      </div>
-      <div *ngIf="project.tags?.length">
-        Tags:
-        <span *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
-          {{ tag.name }}
-        </span>
-      </div>
-    </footer>
-  </article>
-  <div class="sidebar">
-    <div class="filter">
-      <div class="title">Filter</div>
-      <div *ngIf="categoryFilter">
-        {{ categoryFilter.name }} <button (click)="clearFilters()">Del</button>
-      </div>
+<div class="projects">
+  <h1 class="title">{{ title }}.</h1>
 
-      <div *ngIf="tagFilter">
-        {{ tagFilter.name }} <button (click)="clearFilters()">Del</button>
-      </div>
-
-      <app-categories
-        [categoryFilter]="categoryFilter"
-        (newCategoryFilterEvent)="setCategoryFilter($event)"
-      >
-      </app-categories>
-      <app-tags
-        [tagFilter]="tagFilter"
-        (newTagFilterEvent)="setTagFilter($event)"
-      >
-      </app-tags>
+  <div class="filter">
+    <div *ngIf="categoryFilter">
+      {{ categoryFilter.name }}
     </div>
+
+    <div *ngIf="tagFilter">
+      {{ tagFilter.name }}
+    </div>
+
+    <app-categories
+      [categoryFilter]="categoryFilter"
+      (newCategoryFilterEvent)="setCategoryFilter($event)"
+    >
+    </app-categories>
+    <app-tags
+      [tagFilter]="tagFilter"
+      (newTagFilterEvent)="setTagFilter($event)"
+    >
+    </app-tags>
   </div>
-</ng-container>
-<!-- <section *ngIf="selectedProject">
-  <div (click)="clearSelectedProject()">Back</div>
-  <app-project-detail [project]="selectedProject"></app-project-detail>
-</section> -->
-<!-- <div
-class="card"
-*ngFor="let project of projects | projectFilter : tagFilter"
-[style.display]="
-  categoryFilter && categoryFilter.slug !== project.category?.slug
-    ? 'none'
-    : 'block'
-"
-> -->
+  <div class="content">
+    <ng-container *ngIf="!selectedProject">
+      <article
+        class="project"
+        *ngFor="let project of projects | projectFilter : tagFilter"
+        [class.hidden]="
+          categoryFilter && project.category?.id != categoryFilter.id
+        "
+      >
+        <div class="img" routerLink="/projects/{{ project.id }}">
+          <div class="pseudo">View</div>
+          <img src="{{ project.thumb }}" />
+        </div>
+        <div class="info">
+          <h2>{{ project.title | uppercase }}</h2>
+          <div>{{ project.excerpt }}</div>
+
+          <div
+            *ngIf="project.category"
+            (click)="setCategoryFilter(project.category)"
+            class="category"
+          >
+            {{ project.category.name }}
+          </div>
+          <div *ngIf="project.tags?.length" class="tags">
+            <span *ngFor="let tag of project.tags" (click)="setTagFilter(tag)">
+              #{{ tag.name }}
+            </span>
+          </div>
+        </div>
+      </article>
+    </ng-container>
+  </div>
+</div>
+<div class="back">PROJECTS</div>

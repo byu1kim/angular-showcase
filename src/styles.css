@@ -5,8 +5,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  letter-spacing: 0.1rem;
 }
 
 body {
+  font-family: "Bitter", serif;
+  background-color: #111827;
+  color: white;
   height: 100vh;
+}
+
+/* ---- stats.js ---- */
+
+#particles-js {
+  padding: 80px;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+
+  filter: blur(2px);
 }
