@@ -7,9 +7,9 @@ export const TAGS: Tag[] = [
   { id: 2, name: 'HTML', slug: 'html' },
   { id: 3, name: 'CSS', slug: 'css' },
   { id: 4, name: 'React', slug: 'react' },
-  { id: 5, name: 'Vue', slug: 'vue' },
+
   { id: 6, name: 'Laravel', slug: 'laravel' },
-  { id: 7, name: 'Angular', slug: 'angular' },
+
   { id: 8, name: 'Node.Js', slug: 'node' },
   { id: 9, name: 'ASP.NET', slug: 'dotnet' },
   { id: 10, name: 'jQuery', slug: 'jquery' },
@@ -19,4 +19,5 @@ export const TAGS: Tag[] = [
   { id: 14, name: 'Bootstrap', slug: 'bootstrap' },
   { id: 15, name: 'MongoDB', slug: 'MongoDB' },
   { id: 16, name: 'SQL', slug: 'sql' },
+  { id: 17, name: 'EJS', slug: 'ejs' },
 ];

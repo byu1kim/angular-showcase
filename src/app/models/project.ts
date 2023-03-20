@@ -7,9 +7,10 @@ export interface Project {
   slug: string;
   excerpt: string;
   body: string;
-  url: string | null;
+  website: string | null;
+  github: string | null;
   published_date: string | null;
-  image: string | null;
+  image: String[] | null;
   thumb: string | null;
   category_id: string | null;
   created_at: string;

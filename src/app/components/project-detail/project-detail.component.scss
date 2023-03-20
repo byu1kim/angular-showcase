@@ -6,15 +6,27 @@
   margin: auto;
   padding-top: 80px;
 
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+  .title {
+    color: #fde68a;
+  }
   .img {
     width: 100%;
     height: 50vh;
     overflow: hidden;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
     margin-bottom: 20px;
-
+    display: flex;
+    justify-content: center;
     img {
-      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     &:hover {
     }
@@ -31,6 +43,13 @@
     .content {
       margin-bottom: 30px;
     }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: #fde68a;
+      }
+    }
   }
 }
 .back {
@@ -45,5 +64,6 @@
   z-index: -1;
   font-size: 5rem;
   font-weight: 900;
+  text-align: center;
   filter: blur(5px);
 }

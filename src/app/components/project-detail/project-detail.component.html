@@ -1,10 +1,14 @@
 <article *ngIf="project" class="project">
-  <button type="button" (click)="goBack()">Back</button>
+  <button type="button" (click)="goBack()">
+    <i class="fa-solid fa-arrow-left"></i> Back
+  </button>
   <hr />
 
   <div class="info">
     <h2 class="title">{{ project.title | uppercase }}</h2>
-    <div class="img">IMAGE!</div>
+    <div class="img" *ngFor="let img of project.image">
+      <img src="{{ img }}" />
+    </div>
     <div class="sub-title">Detail</div>
     <div class="content" [innerHTML]="project.body">aa</div>
     <div class="sub-title">Category</div>
@@ -18,9 +22,13 @@
       </span>
     </div>
     <div class="sub-title">Website</div>
-    <div class="content">aa</div>
+    <div class="content">
+      <a href="{{ project.website }}">{{ project.website }}</a>
+    </div>
     <div class="sub-title">Github</div>
-    <div class="content">aa</div>
+    <div class="content">
+      <a href="{{ project.github }}">{{ project.github }}</a>
+    </div>
   </div>
 </article>
 <div class="back" *ngIf="project">{{ project.title | uppercase }}</div>
