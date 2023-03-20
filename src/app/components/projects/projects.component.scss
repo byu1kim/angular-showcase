@@ -52,6 +52,10 @@
     }
     .info {
       line-height: 1.5;
+      .info-title {
+        font-family: "Cormorant Garamond", serif;
+        letter-spacing: 0.2rem;
+      }
       .category {
         color: #fcd34d;
       }
@@ -71,4 +75,20 @@
   font-size: 5rem;
   font-weight: 900;
   filter: blur(5px);
+  text-align: center;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  font-size: 0.8rem;
+  .icons {
+    margin: 10px;
+    font-size: 1.2rem;
+    i {
+      margin: 5px;
+    }
+  }
 }

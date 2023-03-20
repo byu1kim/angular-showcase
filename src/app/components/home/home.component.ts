@@ -1,16 +1,25 @@
 import { Component } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
+import { ProjectService } from '../../services/project.service';
+import { Project } from '../../models/project';
+
+import AOS from 'aos';
+
+AOS.init();
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private projectService: ProjectService) {}
+  projects: Project[] = [];
+  getProjects(): void {
+    this.projectService
+      .getProjects()
+      .subscribe((projects) => (this.projects = projects));
+  }
+  ngOnInit(): void {
+    this.getProjects();
+  }
+}

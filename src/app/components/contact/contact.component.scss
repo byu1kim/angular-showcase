@@ -1,37 +1,26 @@
-.about {
+.projects {
   padding: 2rem;
-  padding-top: 80px;
   z-index: 1;
   padding-bottom: 50px;
   max-width: 800px;
   margin: auto;
-
+  padding-top: 80px;
   .title {
     color: #fde68a;
     font-weight: 900;
     font-size: 2.5rem;
-    margin: 30px 0px;
+    padding: 30px 0px;
   }
-
   .content {
-    line-height: 2;
-    padding-bottom: 30px;
-  }
-  .chart {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
-    align-items: flex-end;
-
-    .item {
-      .bar {
-        margin: auto;
-        background-color: gold;
-        width: 30px;
-        height: 50px;
-      }
-      .label {
-        text-align: center;
+    .subtitle {
+      font-weight: 600;
+      margin: 30px 0px 20px 0px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: #fde68a;
       }
     }
   }
@@ -51,7 +40,6 @@
   filter: blur(5px);
   text-align: center;
 }
-
 footer {
   display: flex;
   flex-direction: column;

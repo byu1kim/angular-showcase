@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
     image: null,
     thumb:
       'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg',
-    category_id: 3,
+    category_id: 'full-stack',
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 3, slug: 'full-stack', name: 'Full Stack' },
@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     image: null,
     thumb:
       'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
-    category_id: 1,
+    category_id: 'back-end',
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 1, slug: 'back-end', name: 'Back End' },
@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
     image: null,
     thumb:
       'https://cdn.pixabay.com/photo/2016/03/26/13/09/cup-of-coffee-1280537_1280.jpg',
-    category_id: 2,
+    category_id: 'front-end',
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 2, slug: 'front-end', name: 'Front End' },
@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
     image: null,
     thumb:
       'https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg',
-    category_id: 2,
+    category_id: 'front-end',
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 2, slug: 'front-end', name: 'Front End' },
@@ -160,7 +160,7 @@ export const PROJECTS: Project[] = [
     published_date: null,
     image: null,
     thumb: null,
-    category_id: 3,
+    category_id: 'full-stack',
     created_at: '2023-02-23T22:31:23.000000Z',
     updated_at: '2023-02-23T22:31:23.000000Z',
     category: { id: 3, slug: 'full-stack', name: 'Full Stack' },

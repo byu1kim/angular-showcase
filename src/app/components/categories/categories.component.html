@@ -1,8 +1,15 @@
 <div class="categories">
   <div class="title">Categories</div>
-  <div *ngFor="let category of categories" class="sub-title">
-    <div routerLink="/projects/categories/{{ category.id }}">
-      {{ category.name }}
+  <div class="categoryitems">
+    <div *ngFor="let category of categories" class="sub-title">
+      <div routerLink="/projects/categories/{{ category.slug }}">
+        <div *ngIf="category.slug == paramSlug" class="active">
+          {{ category.name }}
+        </div>
+        <div *ngIf="!(category.slug == paramSlug)">
+          {{ category.name }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

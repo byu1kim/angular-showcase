@@ -10,6 +10,7 @@ import { Category } from '../../models/category';
 export class CategoriesComponent {
   constructor(private categoryService: CategoryService) {}
 
+  @Input() paramSlug: String | undefined;
   @Input() categoryFilter: Category | undefined;
   @Output() newCategoryFilterEvent = new EventEmitter<Category>();
 

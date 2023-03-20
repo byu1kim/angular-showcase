@@ -1,10 +1,15 @@
 <div class="tags">
   <div class="title">Tags</div>
-  <div
-    *ngFor="let tag of tags"
-    class="sub-title"
-    routerLink="/projects/tags/{{ tag.id }}"
-  >
-    {{ tag.name }}
+  <div class="tagitems">
+    <div
+      *ngFor="let tag of tags"
+      class="sub-title"
+      routerLink="/projects/tags/{{ tag.slug }}"
+    >
+      <div *ngIf="tag.slug == paramSlug" class="active">{{ tag.name }}</div>
+      <div *ngIf="!(tag.slug == paramSlug)">
+        {{ tag.name }}
+      </div>
+    </div>
   </div>
 </div>

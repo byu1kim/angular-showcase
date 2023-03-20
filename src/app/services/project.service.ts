@@ -16,14 +16,14 @@ export class ProjectService {
     const project = PROJECTS.find((p) => p.id === id)!;
     return of(project);
   }
-  getProjectsByCategory(id: number): Observable<Project[]> {
+  getProjectsByCategory(id: string): Observable<Project[]> {
     const projects = PROJECTS.filter((p) => p.category_id === id)!;
     return of(projects);
   }
 
-  getProjectsByTag(id: number): Observable<Project[]> {
+  getProjectsByTag(id: string): Observable<Project[]> {
     const projects = PROJECTS.filter((p) => {
-      if (p.tags.some((t) => t.id === id)) {
+      if (p.tags.some((t) => t.slug === id)) {
         return true;
       } else {
         return false;

@@ -12,6 +12,7 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { ProjectDetailComponent } from './components/project-detail/project-detail.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
     ProjectDetailComponent,
     AboutComponent,
     HomeComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

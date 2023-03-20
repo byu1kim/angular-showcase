@@ -8,25 +8,79 @@
   nav {
     position: fixed;
     width: 100%;
-    height: 80px;
+    z-index: 2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #111827;
+
+    color: white;
     .logo {
-      margin-left: 30px;
+      margin: 25px;
     }
-    ul {
-      display: flex;
-      list-style: none;
-      li {
-        margin-right: 30px;
-        &:hover {
-          color: #fcd34d;
-          cursor: pointer;
-        }
+    button {
+      margin: 25px;
+      color: white;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    // ul {
+    //   display: flex;
+    //   list-style: none;
+    //   width: 100%;
+
+    //   li {
+    //     margin-right: 30px;
+    //   }
+    // }
+    a {
+      color: white;
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fcd34d;
+        cursor: pointer;
       }
     }
+  }
+}
+
+.navbar-nav {
+  width: 100%;
+  text-align: right;
+  li {
+    margin: 10px;
+    margin-right: 25px;
+    list-style: none;
+  }
+}
+
+.mobile {
+  .responsive__active {
+    width: 100%;
+  }
+
+  .responsive__inactive {
+    display: none;
+  }
+}
+
+.desktop {
+  button {
+    display: none;
+  }
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .navbar-nav {
+    width: inherit;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

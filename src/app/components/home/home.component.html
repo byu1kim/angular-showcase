@@ -1,18 +1,40 @@
 <section class="first shine">
-  <div class="name">I am Byul,</div>
+  <div class="name">I'm Byul,</div>
   <div class="job">Web Developer</div>
 </section>
 <section class="second">
-  <div class="title">How do I pronounce your name?</div>
-  <div class="content">
-    <code> &#91; bjʌl &#93;</code>
+  <div class="title" data-aos="fade" data-aos-duration="2000">
+    How do I pronounce your name?
+  </div>
+  <div
+    class="content"
+    data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom"
+    data-aos-duration="3000"
+    data-aos-delay="1000"
+  >
+    <code> &#91;bjʌl&#93;</code>
     <div>It means Star in Korean</div>
-    <button>More about me</button>
+    <button routerLink="/about">More about me</button>
   </div>
 </section>
 <section class="third">
-  <div class="title">Recent Projects</div>
-  <div class="content">aaaaaaa</div>
+  <div class="title" data-aos="fade" data-aos-duration="2000">
+    Recent Projects
+  </div>
+  <div class="content">
+    <article class="project"></article>
+    <article class="project" *ngFor="let project of projects.slice(0, 2)">
+      <div class="img" routerLink="/projects/{{ project.id }}">
+        <div class="pseudo">View</div>
+        <img src="{{ project.thumb }}" />
+      </div>
+      <h2 class="info-title">{{ project.title | uppercase }}</h2>
+    </article>
+    <article class="project last">
+      <button routerLink="/projects">View more projects</button>
+    </article>
+  </div>
 </section>
 <footer>
   <div class="icons">

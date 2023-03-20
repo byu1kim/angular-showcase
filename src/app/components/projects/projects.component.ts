@@ -25,14 +25,14 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjectsByCategory(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
     this.projectService
       .getProjectsByCategory(id)
       .subscribe((projects) => (this.projects = projects));
   }
 
   getProjectsByTag(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    const id = String(this.route.snapshot.paramMap.get('id'));
     this.projectService
       .getProjectsByTag(id)
       .subscribe((projects) => (this.projects = projects));
@@ -40,6 +40,8 @@ export class ProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
+      this.paramSlug = params['id'];
+      console.log(this.paramSlug);
       const segment: string = this.route.snapshot.url[1]?.path;
       if (segment === 'categories') {
         this.getProjectsByCategory();
@@ -50,6 +52,8 @@ export class ProjectsComponent implements OnInit {
       }
     });
   }
+
+  @Input() paramSlug: String | undefined;
   @Input() categoryFilter: Category | undefined;
   @Output() newCategoryFilterEvent = new EventEmitter<Category>();
   @Input() tagFilter: Tag | undefined;

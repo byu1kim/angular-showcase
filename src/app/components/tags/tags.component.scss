@@ -2,17 +2,31 @@
   display: none;
 }
 .tags {
+  margin-top: 15px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   .title {
     color: #fcd34d;
     text-transform: uppercase;
     margin-right: 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  .tagitems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .sub-title {
     margin-right: 20px;
     &:hover {
       cursor: pointer;
+      color: #fde68a;
     }
+  }
+  .active {
+    color: #fde68a;
   }
 }

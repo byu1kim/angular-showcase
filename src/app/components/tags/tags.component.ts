@@ -10,6 +10,7 @@ import { Tag } from '../../models/tag';
 export class TagsComponent {
   constructor(private tagService: TagService) {}
 
+  @Input() paramSlug: String | undefined;
   @Input() tagFilter: Tag | undefined;
   @Output() newTagFilterEvent = new EventEmitter<Tag>();
 
